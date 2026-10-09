@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --border: #2d2d30;
+      --text: #1d1d1f;
+      --text-muted: #86868b;
+      --accent: #ff5a00;
+    }
+
+    body {
+      width: 200px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 12px;
+      margin: 0;
+      user-select: none;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .select-box {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      background: var(--card);
+    }
+
+    .select-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    select {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      color: var(--text);
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      padding-right: 24px;
+      font-family: inherit;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      pointer-events: none;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid var(--text);
+    }
+
+    .status {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #28a745;
+      min-height: 14px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .footer-brand {
+      margin-top: 6px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .footer-brand a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-brand a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <h3>darkR - allegro:</h3>
+  <div class="select-box">
+    <div class="select-wrapper">
+      <select id="themeSelect">
+        <option value="dark">Ciemny</option>
+        <option value="light">Jasny (domyślny)</option>
+      </select>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div class="status" id="statusMsg"></div>
+  <div class="footer-brand">
+    <a href="https://rrdev.app" target="_blank">by RR-DEV</a>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
